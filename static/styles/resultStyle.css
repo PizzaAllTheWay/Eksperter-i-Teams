@@ -1,0 +1,48 @@
+/* Style the container */
+.result-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+}
+
+/* Style the result text boxes */
+.result-text-box {
+    width: 50%;
+}
+
+.result-text-box table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+}
+
+.result-text-box table td {
+    padding: 5px;
+    border: 1px solid #141414;
+    text-align: left;
+}
+
+.result-text-box table tr:last-child {
+    background-color: rgba(255, 255, 0, 0.6);
+}
+
+/* Style the chart container */
+.result-pi-chart-box {
+    width: 30%;
+}
+
+/* End calculation image styling */
+.results-center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto; 
+    margin-top: 100px;
+}
+
+.results-center-container img {
+    max-width: 100%;
+    height: auto;
+}

@@ -1,0 +1,16 @@
+/* Style for the header container */
+.header-container {
+    background-image: url("../images/headerImage.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    padding: 25px;
+    text-align: center;
+}
+
+/* Fancy text style */
+.header-container text {
+    color: #fff;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 48px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}

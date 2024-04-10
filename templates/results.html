@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A student project :)">
+    <meta name="Author" content="Jakob Ravnestad">
+    <meta name="Author" content="Martynas Smilingis">
+    <title>Resultat</title>
+
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Include the CSS files -->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/headerStyles.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/resultStyle.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/buttonStyles.css')}}">
+
+</head>
+<body>
+    <!-- Title Section -->
+    <header class="header-container">
+        <text>Resultat</text>
+    </header>
+
+    <!-- Results Display -->
+    <div class="result-container">
+        <!-- Results information -->
+        <div class="result-text-box">
+            <table>
+                <tr>
+                    <td>Nødvendig Effekt</td>
+                    <td><span id="sliderResultNecessaryEffect">0 kW</span></td>
+                </tr>
+                <tr>
+                    <td>Daglig Energi Behov</td>
+                    <td><span id="sliderResultDailyEnergyRequirement">0 kWh</span></td>
+                </tr>
+                <tr>
+                    <td>Ønsket Batteri Kapasitet</td>
+                    <td><span id="sliderResultDesiredBatteryCapacity">0 kWh</span></td>
+                </tr>
+                <tr>
+                    <td>Solforhold</td>
+                    <td><span id="sliderResultSunCondition">0</span></td>
+                </tr>
+                <tr>
+                    <td>Gjennomsnittlig Bølgehøyde</td>
+                    <td><span id="sliderResultAverageWaveHeight">0.0 m</span></td>
+                </tr>
+                <tr>
+                    <td>Gjennomsnittlig Vindhastighet</td>
+                    <td><span id="sliderResultAverageWindSpeed">0.0 m/s</span></td>
+                </tr>
+                <tr>
+                    <td><b>Sum</b></td>
+                    <td><b><span id="sumResult">0.0</span><b></td>
+                </tr>
+            </table>
+
+            <!-- Button Section -->
+            <button class="square-button" onclick="redirect_to_home_page()">Tilbake</button>
+        </div>
+
+        <!-- Result Pie Chart -->
+        <div class="result-pi-chart-box">
+            <canvas id="pieChart"></canvas>
+        </div>
+    </div>
+
+    <div class="results-center-container">
+        <img id="imageEnergySupplySolution" alt="Energy Supply Solution Calculation Result" />
+    </div>
+    
+    <!-- Include the JavaScript files for dynamic behavior -->
+    <script src="/static/scripts/results.js"></script>
+    <script src="/static/scripts/buttonBehaviour.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A student project :)">
+    <meta name="Author" content="Jakob Ravnestad">
+    <meta name="Author" content="Martynas Smilingis">
+    <title>Memes</title>
+
+    <!-- Include the CSS files -->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/headerStyles.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/secretStyle.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/buttonStyles.css')}}">
+</head>
+<body>
+    <!-- Title Section -->
+    <header class="header-container">
+        <text>Memes</text>
+    </header>
+
+    <!-- Memes -->
+    <div class="memes-container">
+        <img src="/static/images/memes/gandalf.gif" alt="Secret Image">
+    </div>
+
+    <!-- Button Section -->
+    <button class="square-button" onclick="redirect_to_home_page()">Tilbake</button>
+
+    <!-- Include the JavaScript files for dynamic behavior -->
+    <script src="/static/scripts/buttonBehaviour.js"></script>
+</body>
+</html>
