@@ -11,3 +11,25 @@ After that everyone in your local network will have acess to the webpage as long
 # AWS
 http://ec2-51-20-190-43.eu-north-1.compute.amazonaws.com:9999/
 Go to this website that is hosted on AWS to see the website. Using AWS you can host this website front- and back- end anywhere in the world and anyone can acess it. Amazing :O
+
+# AWS Cheet Sheet
+ssh -i /path/to/your-key-pair.pem ec2-user@your-instance-public-dns
+
+
+Once you have the instance you can ssh into it by saying:
+ssh -i TestingHello123.pem ubuntu@<Domain-IP>
+Domain-IP last time: 51.20.190.43
+
+Now just run and install everything lol
+Now launch everything
+Use the following comand to forever make it run in the background no matter what
+
+```
+$ nohup ~/Eksperter-i-Teams/START_WEBSITE.bash &
+```
+
+Now go to AWS website to EC2 and instance, then seach for instances public DNS name
+For us it was:
+http://ec2-51-20-190-43.eu-north-1.compute.amazonaws.com:9999/
+
+(The PORT and the end is for the webpage)
