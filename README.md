@@ -10,4 +10,4 @@ After that everyone in your local network will have acess to the webpage as long
 
 # AWS
 http://ec2-51-20-190-43.eu-north-1.compute.amazonaws.com:9999/
-Go to this website that is hosted on AWS to see the website. Using AWS you can host this website front- and back- end anywhere in the world and anyone can acess it. Aazing :O
+Go to this website that is hosted on AWS to see the website. Using AWS you can host this website front- and back- end anywhere in the world and anyone can acess it. Amazing :O
