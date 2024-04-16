@@ -7,3 +7,7 @@ After choosing your standards all the data gets sent to the backend server that 
 # Start Script
 To start hosting webpage on your PC simply run "START_WEBSITE.bat", or you could use command "python server.py", either one works :)
 After that everyone in your local network will have acess to the webpage as long as your PC is running the script
+
+# AWS
+http://ec2-51-20-190-43.eu-north-1.compute.amazonaws.com:9999/
+Go to this website that is hosted on AWS to see the website. Using AWS you can host this website front- and back- end anywhere in the world and anyone can acess it. Aazing :O
