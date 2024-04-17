@@ -15,16 +15,21 @@
 <body>
     <!-- Title Section -->
     <header class="header-container">
+        <a href="/">
+            <img src="/static/images/homeIcon.png" alt="Home">
+        </a>
         <text>Memes</text>
     </header>
 
-    <!-- Memes -->
-    <div class="memes-container">
-        <img src="/static/images/memes/gandalf.gif" alt="Secret Image">
+    <!-- Button Section -->
+    <div>
+        <button class="square-button" onclick="give_new_meme()">Gib new meme :3</button>
     </div>
 
-    <!-- Button Section -->
-    <button class="square-button" onclick="redirect_to_home_page()">Tilbake</button>
+    <!-- Memes -->
+    <div class="memes-container">
+        <img id="memePicture" src="/static/images/memes/gandalf.gif" alt="Secret Image">
+    </div>
 
     <!-- Include the JavaScript files for dynamic behavior -->
     <script src="/static/scripts/buttonBehaviour.js"></script>

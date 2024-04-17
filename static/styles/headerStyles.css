@@ -14,3 +14,27 @@
     font-size: 48px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+/* Style for the home button */
+.header-container a {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 75px;
+    height: 75px;
+    transition: all 0.3s ease; /* Animation */
+}
+
+.header-container a img {
+    opacity: 0.7; 
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.header-container a:hover img {
+    opacity: 1.0; 
+    filter: brightness(1.2);
+}
+
+

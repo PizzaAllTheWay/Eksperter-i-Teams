@@ -1,4 +1,5 @@
 # Libraries
+import os
 import socket
 import backend.energyAlgorithm as energyAlgorithm
 from flask import Flask, render_template, request, jsonify, send_file
@@ -55,6 +56,14 @@ def calculate():
     # Send the calculated data that has been saved as a plot in an image
     # Send this image back to the client
     return send_file('backend/energySupplySolutions.png', mimetype='image/png')
+
+# Memes GET function
+@server.route("/api/getMemesList")
+def api_memes_list():
+    memes_list = os.listdir("static/images/memes/")
+    # Filter out non-image files if necessary
+    memes_list = [meme for meme in memes_list if meme.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
+    return jsonify(memes_list)
 
 
 

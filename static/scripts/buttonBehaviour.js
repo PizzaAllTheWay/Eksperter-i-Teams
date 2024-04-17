@@ -16,7 +16,61 @@ function redirect_to_results_page() {
     "&sliderValueAverageWaveHeight=" + sliderValueAverageWaveHeight +
     "&sliderValueAverageWindSpeed=" + sliderValueAverageWindSpeed;
 }
+  
 
-function redirect_to_home_page() {
-    window.location.href = "/";
+
+// Asynchronously fetch the list of memes
+let memesArray = [];
+
+window.addEventListener('load', async () => {
+    try {
+      memesArray = await get_all_memes(); // Fetch memes and store them in the global variable
+      console.log('Memes loaded:', memesArray);
+    } catch (error) {
+      console.error('Failed to load memes:', error);
+    }
+  });
+
+async function get_all_memes() {
+    try {
+        // Fetch the list from the server
+        let response = await fetch('/api/getMemesList');
+        if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        // Parse the JSON response
+        let memesArray = await response.json();
+        return memesArray; // This is an array
+    } 
+    catch (error) {
+        console.error('Failed to fetch memes list:', error);
+    }
 }
+  
+// Function to handle the meme change
+async function give_new_meme() {
+    try {
+        if (memesArray && memesArray.length > 0) {
+            // Get the image element
+            var image = document.getElementById('memePicture');
+
+            // Generate a random index based on the length of the memesArray
+            var randomIndex = Math.floor(Math.random() * memesArray.length);
+
+            // Construct the new path for a random meme
+            var newMemePath = '/static/images/memes/' + memesArray[randomIndex];
+
+            // Set the new src for the image
+            image.src = newMemePath;
+        } 
+        else {
+            console.error('No memes found in the memes array', memesArray);
+            console.error('No memes found in the memes array', memesArray[0]);
+            console.error('No memes found in the memes array', memesArray.length);
+        }
+    } catch (error) {
+        console.error('Error in give_new_meme:', error);
+    }
+}
+  
