@@ -64,7 +64,7 @@ async function give_new_meme() {
 
             // Set the new src for the image
             image.src = newMemePath;
-        } 
+        }
         else {
             console.error('No memes found in the memes array', memesArray);
         }

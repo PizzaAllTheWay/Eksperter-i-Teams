@@ -55,23 +55,36 @@ document.getElementById("sliderResultSunCondition").textContent = sliderValueSun
 document.getElementById("sliderResultAverageWaveHeight").textContent = sliderValueAverageWaveHeight + " m";
 document.getElementById("sliderResultAverageWindSpeed").textContent = sliderValueAverageWindSpeed + " m/s";
 
-document.getElementById("sumResult").textContent = "Testing";
+// Logic for recommended solution of technology
+let recommendedSolutionText = ""
+
+if (sliderValueSunCondition >= 1.0) {
+    recommendedSolutionText = "Sol Kraft"
+}
+else if (sliderValueAverageWaveHeight >= 5.0) {
+    recommendedSolutionText = "Bølge Kraft"
+}
+else if (sliderValueAverageWindSpeed >= 10.0) {
+    recommendedSolutionText = "Vind Kraft"
+}
+else {
+    recommendedSolutionText = "Variert"
+}
+
+document.getElementById("recommendedSolution").textContent = recommendedSolutionText;
 
 // Prepare data for the pie chart
 var data = {
-    labels: ["Slider 1",
-             "Slider 2",
-             "Slider 3",
-             "sum"],
+    labels: ["Nødvendig Energi",
+             "Daglig Energi",
+             "Ønsket Energi"],
     datasets: [{
         data: [sliderValueNecessaryEffect,
                sliderValueDailyEnergyRequirement,
-               sliderValueDesiredBatteryCapacity,
-               sumResult],
+               sliderValueDesiredBatteryCapacity],
         backgroundColor: ["#FF6384",
-                          "#36A2EB",
-                          "#FFCE56",
-                          "#c3f1ab"]
+                          "#7BCDBA",
+                          "#89CFF0"]
     }]
 };
 
