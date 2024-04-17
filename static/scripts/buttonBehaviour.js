@@ -22,15 +22,6 @@ function redirect_to_results_page() {
 // Asynchronously fetch the list of memes
 let memesArray = [];
 
-window.addEventListener('load', async () => {
-    try {
-      memesArray = await get_all_memes(); // Fetch memes and store them in the global variable
-      console.log('Memes loaded:', memesArray);
-    } catch (error) {
-      console.error('Failed to load memes:', error);
-    }
-  });
-
 async function get_all_memes() {
     try {
         // Fetch the list from the server
@@ -47,6 +38,16 @@ async function get_all_memes() {
         console.error('Failed to fetch memes list:', error);
     }
 }
+
+window.addEventListener('load', async () => {
+    try {
+        memesArray = await get_all_memes();
+        console.log('Memes loaded:', memesArray);
+    } 
+    catch (error) {
+        console.error('Failed to load memes:', error);
+    }
+});
   
 // Function to handle the meme change
 async function give_new_meme() {
