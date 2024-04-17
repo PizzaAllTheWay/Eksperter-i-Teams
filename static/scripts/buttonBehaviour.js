@@ -7,6 +7,14 @@ function redirect_to_results_page() {
     var sliderValueAverageWaveHeight = document.getElementById("sliderAverageWaveHeight").value;
     var sliderValueAverageWindSpeed = document.getElementById("sliderAverageWindSpeed").value;
 
+    // Store values in local storage so that when the user goes back to the main page, the values don't reset to default
+    localStorage.setItem("sliderValueNecessaryEffect", sliderValueNecessaryEffect);
+    localStorage.setItem("sliderValueDailyEnergyRequirement", sliderValueDailyEnergyRequirement);
+    localStorage.setItem("sliderValueDesiredBatteryCapacity", sliderValueDesiredBatteryCapacity);
+    localStorage.setItem("sliderValueSunCondition", sliderValueSunCondition);
+    localStorage.setItem("sliderValueAverageWaveHeight", sliderValueAverageWaveHeight);
+    localStorage.setItem("sliderValueAverageWindSpeed", sliderValueAverageWindSpeed);
+
     // Redirect to the new page with the slider data as a URL parameter
     window.location.href = "/results" + 
     "?sliderValueNecessaryEffect=" + sliderValueNecessaryEffect +

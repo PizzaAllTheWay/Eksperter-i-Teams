@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+function update_sliders() {
     // Get the elements of the slider
     var sliderNecessaryEffect = document.getElementById("sliderNecessaryEffect");
     var sliderDailyEnergyRequirement = document.getElementById("sliderDailyEnergyRequirement");
@@ -42,4 +42,23 @@ document.addEventListener("DOMContentLoaded", function() {
     sliderAverageWindSpeed.oninput = function() {
         outputTextAverageWindSpeed.innerHTML = this.value;
     };
+}
+
+// Every time user goes back to the home page, we load the previously configured slider parameters, this way user doesn't have to do a lot to reconfigure stuff
+window.addEventListener("load", function() {
+    // Retrieve values from local storage and update sliders
+    document.getElementById("sliderNecessaryEffect").value = localStorage.getItem("sliderValueNecessaryEffect") || 150;
+    document.getElementById("sliderDailyEnergyRequirement").value = localStorage.getItem("sliderValueDailyEnergyRequirement") || 1500;
+    document.getElementById("sliderDesiredBatteryCapacity").value = localStorage.getItem("sliderValueDesiredBatteryCapacity") || 5000;
+    document.getElementById("sliderSunCondition").value = localStorage.getItem("sliderValueSunCondition") || 0;
+    document.getElementById("sliderAverageWaveHeight").value = localStorage.getItem("sliderValueAverageWaveHeight") || 5;
+    document.getElementById("sliderAverageWindSpeed").value = localStorage.getItem("sliderValueAverageWindSpeed") || 10;
+
+    // update position and text associated with these sliders
+    update_sliders();
 });
+
+// Every time we move the slider around, the slider context like text for slider value right now gets updated
+document.addEventListener("DOMContentLoaded", update_sliders());
+
+

@@ -79,12 +79,16 @@ var data = {
              "Daglig Energi",
              "Ønsket Energi"],
     datasets: [{
-        data: [sliderValueNecessaryEffect,
-               sliderValueDailyEnergyRequirement,
-               sliderValueDesiredBatteryCapacity],
-        backgroundColor: ["#FF6384",
-                          "#7BCDBA",
-                          "#89CFF0"]
+        data: [
+            sliderValueNecessaryEffect,
+            sliderValueDailyEnergyRequirement,
+            sliderValueDesiredBatteryCapacity
+        ],
+        backgroundColor: [
+            "rgba(255, 99, 132, 0.6)",  // Soft red
+            "rgba(90, 180, 50, 0.6)",   // Soft green
+            "rgba(54, 162, 235, 0.6)"    // Soft blue
+        ]
     }]
 };
 
@@ -96,6 +100,18 @@ var myPieChart = new Chart(ctx, {
     type: 'pie',
     data: data,
     options: {
-        // Add any additional options here
+        responsive: true,
+        legend: {
+            display: true,
+            position: 'top'
+        },
+        title: {
+            display: true,
+            text: 'Energi Forhold'
+        },
+        animation: {
+            animateRotate: true,
+            duration: 1000
+        }
     }
 });
