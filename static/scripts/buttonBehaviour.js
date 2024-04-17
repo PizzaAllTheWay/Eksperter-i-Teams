@@ -67,8 +67,6 @@ async function give_new_meme() {
         } 
         else {
             console.error('No memes found in the memes array', memesArray);
-            console.error('No memes found in the memes array', memesArray[0]);
-            console.error('No memes found in the memes array', memesArray.length);
         }
     } catch (error) {
         console.error('Error in give_new_meme:', error);
