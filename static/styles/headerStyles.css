@@ -1,17 +1,45 @@
+/* Adjusting how far down the rest of the body is compared to header container so we see the whole context */
+body {
+    padding-top: 120px;
+}
+
 /* Style for the header container */
 .header-container {
-    background-image: url("../images/headerImage.jpg");
-    background-size: 100% 100%;
-    background-position: center;
-    padding: 25px;
+    position: fixed; /* Makes the header stay in place during scroll */
+    top: 0;          
+    left: 0;         
+    right: 0;        
+    z-index: 1000;   /* Ensures the header stays above other content */
+
+    background-image: url("../images/headerImage.png");
+    background-size: cover;
+    background-position: center 700px;
+    padding: 15px;
     text-align: center;
+    
+    /* Ensures the pseudo-element doesn't extend outside the header */
+    overflow: hidden; 
+    height: 80px;
 }
+
+/* Adding the overlay */
+.header-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Black overlay with 50% opacity */
+    z-index: -1; /* Ensures the overlay is behind the text and other content */
+}
+
 
 /* Fancy text style */
 .header-container text {
     color: #fff;
     font-family: "Times New Roman", Times, serif;
-    font-size: 48px;
+    font-size: 72px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -20,8 +48,8 @@
     position: absolute;
     top: 20px;
     left: 20px;
-    width: 75px;
-    height: 75px;
+    width: 80px;
+    height: 80px;
     transition: all 0.3s ease; /* Animation */
 }
 

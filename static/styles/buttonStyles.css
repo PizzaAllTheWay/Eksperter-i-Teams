@@ -12,9 +12,13 @@
     cursor: pointer; /* Change cursor to pointer on hover */
     border-radius: 0; /* Square edges */
     transition: background-color 0.3s; /* Smooth background color transition */
+    margin-top: 20px; /* Adds space above the button, adjust as needed */
 }
 
 /* Button hover effect */
 .square-button:hover {
     opacity: 1;
+    transform: translateY(-3px); /* Button moves up slightly on hover */
+    box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2); /* Shadow gets larger on hover */
 }
+

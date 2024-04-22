@@ -5,8 +5,8 @@ var sliderValueNecessaryEffect = parseInt(urlParams.get('sliderValueNecessaryEff
 var sliderValueDailyEnergyRequirement = parseInt(urlParams.get('sliderValueDailyEnergyRequirement'));
 var sliderValueDesiredBatteryCapacity = parseInt(urlParams.get('sliderValueDesiredBatteryCapacity'));
 var sliderValueSunCondition = parseInt(urlParams.get('sliderValueSunCondition'));
-var sliderValueAverageWaveHeight = parseInt(urlParams.get('sliderValueAverageWaveHeight'));
-var sliderValueAverageWindSpeed = parseInt(urlParams.get('sliderValueAverageWindSpeed'));
+var sliderValueAverageWaveHeight = parseFloat(urlParams.get('sliderValueAverageWaveHeight'));
+var sliderValueAverageWindSpeed = parseFloat(urlParams.get('sliderValueAverageWindSpeed'));
 
 
 
