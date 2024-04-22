@@ -28,6 +28,10 @@ var data = {
 
 // Send the data to the Flask route
 // We get a picture of a plot with the calculated results back here that we can display
+// Fetch the calculation results and then fetch the recommended solution
+
+console.log(data);
+
 fetch('/calculate', {
     method: 'POST',
     headers: {
@@ -39,6 +43,31 @@ fetch('/calculate', {
 .then(blob => {
     var imgURL = URL.createObjectURL(blob);
     document.querySelector('#imageEnergySupplySolution').src = imgURL;
+
+    // Data again
+    var data = {
+        sliderValueNecessaryEffect: sliderValueNecessaryEffect,
+        sliderValueDailyEnergyRequirement: sliderValueDailyEnergyRequirement,
+        sliderValueDesiredBatteryCapacity: sliderValueDesiredBatteryCapacity,
+        sliderValueSunCondition: sliderValueSunCondition,
+        sliderValueAverageWaveHeight: sliderValueAverageWaveHeight,
+        sliderValueAverageWindSpeed: sliderValueAverageWindSpeed
+    };
+
+    // Only after the first fetch is complete, start the second fetch
+    return fetch('/api/energySolution', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    });
+})
+.then(response => response.text())  // Process the second fetch's response as text
+.then(text => {
+    // Logic for recommended solution of technology
+    // We get a string of a proposed best solution and print it on the screen for the user
+    document.getElementById("recommendedSolution").textContent = text;  // Update the text content of the element
 })
 .catch(error => {
     console.error('Error:', error);
@@ -55,29 +84,11 @@ document.getElementById("sliderResultSunCondition").textContent = sliderValueSun
 document.getElementById("sliderResultAverageWaveHeight").textContent = sliderValueAverageWaveHeight + " m";
 document.getElementById("sliderResultAverageWindSpeed").textContent = sliderValueAverageWindSpeed + " m/s";
 
-// Logic for recommended solution of technology
-let recommendedSolutionText = ""
-
-if (sliderValueSunCondition >= 1.0) {
-    recommendedSolutionText = "Sol Kraft"
-}
-else if (sliderValueAverageWaveHeight >= 5.0) {
-    recommendedSolutionText = "Bølge Kraft"
-}
-else if (sliderValueAverageWindSpeed >= 10.0) {
-    recommendedSolutionText = "Vind Kraft"
-}
-else {
-    recommendedSolutionText = "Variert"
-}
-
-document.getElementById("recommendedSolution").textContent = recommendedSolutionText;
-
 // Prepare data for the pie chart
 var data = {
-    labels: ["Nødvendig Energi",
-             "Daglig Energi",
-             "Ønsket Energi"],
+    labels: ["Nødvendig Effekt",
+             "Daglig Energi Behov",
+             "Batteri Kapasitet"],
     datasets: [{
         data: [
             sliderValueNecessaryEffect,

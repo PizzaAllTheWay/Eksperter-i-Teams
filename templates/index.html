@@ -6,7 +6,7 @@
     <meta name="description" content="A student project :)">
     <meta name="Author" content="Jakob Ravnestad">
     <meta name="Author" content="Martynas Smilingis">
-    <title>Eksperter I Teams</title>
+    <title>Energy Barge</title>
 
     <!-- Include the CSS files -->
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/headerStyles.css')}}">
@@ -20,23 +20,23 @@
         <a href="/">
             <img src="/static/images/homeIcon.png" alt="Home">
         </a>
-        <text>Eksperter i Teams</text>
+        <text>Energy Barge</text>
     </header>
 
     <!-- Slider Section -->
     <div style="text-align: center;">
         <div class="slider-container">
-            <label for="sliderNecessaryEffect">Nødvendig Effekt [kW]</label><br>
-            <label for="sliderNecessaryEffect" id="outputTextNecessaryEffect">150</label><label for="sliderNecessaryEffect"> Wh</label><br>
+            <label for="sliderNecessaryEffect">Nødvendig Effekt</label><br>
+            <label for="sliderNecessaryEffect" id="outputTextNecessaryEffect">150</label><label for="sliderNecessaryEffect"> kW</label><br>
             <input type="range" min="0" max="300" value="150" step="1" id="sliderNecessaryEffect">
         </div>
         <div class="slider-container">
-            <label for="sliderDailyEnergyRequirement">Daglig Energi Behov [kWh]</label><br>
+            <label for="sliderDailyEnergyRequirement">Daglig Energi Behov</label><br>
             <label for="sliderDailyEnergyRequirement" id="outputTextDailyEnergyRequirement">1500</label><label for="sliderDailyEnergyRequirement"> kWh</label><br>
             <input type="range" min="0" max="3000" value="1500" step="10" id="sliderDailyEnergyRequirement">
         </div>
         <div class="slider-container">
-            <label for="sliderDesiredBatteryCapacity">Ønsket Batteri Kapasitet [kWh]</label><br>
+            <label for="sliderDesiredBatteryCapacity">Ønsket Batteri Kapasitet</label><br>
             <label for="sliderDesiredBatteryCapacity" id="outputTextDesiredBatteryCapacity">5000</label><label for="sliderDesiredBatteryCapacity"> kWh</label><br>
             <input type="range" min="0" max="10000" value="5000" step="10" id="sliderDesiredBatteryCapacity">
         </div>
@@ -46,12 +46,12 @@
             <input type="range" min="0" max="1" value="0" step="1" id="sliderSunCondition">
         </div>
         <div class="slider-container">
-            <label for="sliderAverageWaveHeight">Gjennomsnittlig Bølgehøyde [m]</label><br>
+            <label for="sliderAverageWaveHeight">Gjennomsnittlig Bølgehøyde</label><br>
             <label for="sliderAverageWaveHeight" id="outputTextAverageWaveHeight">5</label><label for="sliderAverageWaveHeight"> m</label><br>
             <input type="range" min="0" max="10" value="5" step="0.1" id="sliderAverageWaveHeight">
         </div>
         <div class="slider-container">
-            <label for="sliderAverageWindSpeed">Gjennomsnittlig Vindhastighet [m/s]</label><br>
+            <label for="sliderAverageWindSpeed">Gjennomsnittlig Vindhastighet</label><br>
             <label for="sliderAverageWindSpeed" id="outputTextAverageWindSpeed">10</label><label for="sliderAverageWindSpeed"> m/s</label><br>
             <input type="range" min="0" max="20" value="10" step="0.1" id="sliderAverageWindSpeed">
         </div>

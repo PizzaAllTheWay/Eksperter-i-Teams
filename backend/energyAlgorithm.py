@@ -5,6 +5,11 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import math
 
+import matplotlib
+matplotlib.use('Agg')  # Use the 'Agg' backend which does not require a GUI
+
+
+
 def calculate_capex_cost_per_kwh(data, requirements):
     # Beregner nødvendig antall batteripakker og tilleggskostnad per teknologi basert på lagringskrav
     batteripakke_data = data.pop('Batteripakke')
@@ -133,6 +138,9 @@ def run_calculation(effect: float,
     print(f"Areal pr. Bølge enhet enhet: 144 m2")
     print(f"Areal pr. Vindmølle enhet: 25 m2")
     print(f"Areal pr. Hydrogen aggregat enhet: 25 m2")
+
+    # Return answer in data fromat for future usage
+    return df
 
 
 

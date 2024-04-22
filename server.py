@@ -2,7 +2,7 @@
 import os
 import socket
 import backend.energyAlgorithm as energyAlgorithm
-from flask import Flask, render_template, request, jsonify, send_file
+from flask import Flask, render_template, request, jsonify, send_file, Response
 
 
 
@@ -46,16 +46,76 @@ def calculate():
         sunEnergy = "ja"
 
     # Run the calculation
-    energyAlgorithm.run_calculation(sliderValueNecessaryEffect,
-                                    sliderValueDailyEnergyRequirement,
-                                    sliderValueDesiredBatteryCapacity,
-                                    sunEnergy,
-                                    sliderValueAverageWaveHeight,
-                                    sliderValueAverageWindSpeed)
+    energyAlgorithmSolutionDataFrame = energyAlgorithm.run_calculation(sliderValueNecessaryEffect,
+                                                                       sliderValueDailyEnergyRequirement,
+                                                                       sliderValueDesiredBatteryCapacity,
+                                                                       sunEnergy,
+                                                                       sliderValueAverageWaveHeight,
+                                                                       sliderValueAverageWindSpeed)
+
+    # Debugging to see values calculated
+    print(energyAlgorithmSolutionDataFrame)
 
     # Send the calculated data that has been saved as a plot in an image
     # Send this image back to the client
     return send_file('backend/energySupplySolutions.png', mimetype='image/png')
+
+# Get best solution
+@server.route('/api/energySolution', methods=['POST'])
+def solution():
+    # Make sure you are actually receiving JSON
+    if not request.is_json:
+        print("Missing JSON in request")
+        return jsonify({"error": "Missing JSON in request"}), 400
+
+    data = request.get_json()
+
+    # Check if all keys exist
+    keys = ['sliderValueNecessaryEffect', 'sliderValueDailyEnergyRequirement', 'sliderValueDesiredBatteryCapacity',
+            'sliderValueSunCondition', 'sliderValueAverageWaveHeight', 'sliderValueAverageWindSpeed']
+    if not all(key in data for key in keys):
+        print("Missing one or more required data parameters.")
+        return jsonify({"error": "Missing one or more required data parameters."}), 400
+
+
+    # Save data from JSON user POST to good variables
+    data = request.json
+    sliderValueNecessaryEffect = float(data['sliderValueNecessaryEffect'])
+    sliderValueDailyEnergyRequirement = float(data['sliderValueDailyEnergyRequirement'])
+    sliderValueDesiredBatteryCapacity = float(data['sliderValueDesiredBatteryCapacity'])
+    sliderValueSunCondition = int(data['sliderValueSunCondition'])
+    sliderValueAverageWaveHeight = float(data['sliderValueAverageWaveHeight'])
+    sliderValueAverageWindSpeed = float(data['sliderValueAverageWindSpeed'])
+
+    # Convert 0 and 1 to the correct format for the calculation
+    sunEnergy = "nei"
+    if (sliderValueSunCondition == 1):
+        sunEnergy = "ja"
+
+    # Run the calculation
+    energyAlgorithmSolutionDataFrame = energyAlgorithm.run_calculation(sliderValueNecessaryEffect,
+                                                                       sliderValueDailyEnergyRequirement,
+                                                                       sliderValueDesiredBatteryCapacity,
+                                                                       sunEnergy,
+                                                                       sliderValueAverageWaveHeight,
+                                                                       sliderValueAverageWindSpeed)
+
+    # Debugging to see values calculated
+    print(energyAlgorithmSolutionDataFrame)
+    
+    # Calculate the best solution
+    # Filter out rows where Cost_per_kWh_needed is 0
+    filtered_df = energyAlgorithmSolutionDataFrame[energyAlgorithmSolutionDataFrame['Cost_per_kWh_needed'] > 0]
+
+    if filtered_df.empty:
+        best_energy = "Ingen Løsning..."
+    else:
+        # Find the index (name) of the row with the minimum 'Cost_per_kWh_needed'
+        best_energy = filtered_df['Cost_per_kWh_needed'].idxmin()
+
+    # return Best energy
+    print(best_energy)
+    return Response(best_energy, mimetype='text/plain')  # Return text as plain text
 
 # Memes GET function
 @server.route("/api/getMemesList")
