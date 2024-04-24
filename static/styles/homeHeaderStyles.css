@@ -1,0 +1,95 @@
+html, body {
+    height: 100%; /* Ensures both html and body span the entire height of the viewport */
+    margin: 0; /* Removes default browser margin */
+    padding: 0; /* Removes default browser padding */
+    overflow: hidden; /* Prevents horizontal scroll */
+}
+
+body {
+    position: relative; /* Necessary for positioning the pseudo-element */
+    background-image: url('/static/images/headerImage.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Optional: makes the background fixed during scroll */
+    padding-top: 130px;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency here */
+    z-index: 1;
+}
+
+/* Ensure content on body is not affected by the pseudo-element */
+body * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Style for the header container */
+.header-container {
+    position: fixed; /* Makes the header stay in place during scroll */
+    top: 0;          
+    left: 0;         
+    right: 0;        
+    z-index: 1000;   /* Ensures the header stays above other content */
+
+    background-size: cover;
+    background-position: center 700px;
+    padding: 15px;
+    text-align: center;
+    
+    /* Ensures the pseudo-element doesn't extend outside the header */
+    overflow: hidden; 
+    height: 100px;
+}
+
+/* Adding the overlay */
+.header-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0); /* Black overlay with 50% opacity */
+    z-index: -1; /* Ensures the overlay is behind the text and other content */
+}
+
+
+/* Fancy text style */
+.header-container text {
+    color: #fff;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 72px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Style for the home button */
+.header-container a {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+    transition: all 0.3s ease; /* Animation */
+}
+
+.header-container a img {
+    opacity: 0.7; 
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.header-container a:hover img {
+    opacity: 1.0; 
+    filter: brightness(1.2);
+}
+
+

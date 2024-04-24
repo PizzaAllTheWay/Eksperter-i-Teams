@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" href="/static/images/TabIcon.ico">
 
     <!-- Include the CSS files -->
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/headerStyles.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/homeHeaderStyles.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/sliderStyles.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/buttonStyles.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/secretStyle.css')}}">
@@ -44,7 +44,7 @@
             <input type="range" min="0" max="10000" value="5000" step="10" id="sliderDesiredBatteryCapacity">
         </div>
         <div class="slider-container">
-            <label for="sliderSunCondition">Solforhold [0-Normal/1-Bra]</label><br>
+            <label for="sliderSunCondition">Solforhold [0-Dårlig/1-Normal]</label><br>
             <label for="sliderSunCondition" id="outputTextSunCondition">0</label><label for="sliderSunCondition"></label><br>
             <input type="range" min="0" max="1" value="0" step="1" id="sliderSunCondition">
         </div>
