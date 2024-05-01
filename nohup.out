@@ -112,3 +112,14 @@ Press CTRL+C to quit
 129.241.236.69 - - [01/May/2024 09:47:49] "GET /static/scripts/buttonBehaviour.js HTTP/1.1" 304 -
 129.241.236.69 - - [01/May/2024 09:47:49] "GET /api/getMemesList HTTP/1.1" 200 -
 129.241.236.69 - - [01/May/2024 09:47:49] "GET /static/images/TabIcon.ico HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:50:37] "GET / HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:50:38] "GET /static/styles/homeHeaderStyles.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:50:38] "GET /static/images/homeIcon.png HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:50:38] "GET /static/styles/secretStyle.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:50:38] "GET /static/styles/sliderStyles.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:50:38] "GET /static/styles/buttonStyles.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:50:38] "GET /static/scripts/buttonBehaviour.js HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:50:38] "GET /static/scripts/sliderBehaviour.js HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:50:38] "GET /static/images/headerImage.png HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:50:38] "GET /static/images/TabIcon.ico HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:50:38] "GET /api/getMemesList HTTP/1.1" 200 -
