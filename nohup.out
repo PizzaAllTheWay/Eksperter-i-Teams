@@ -1,0 +1,114 @@
+ ###==================================================### 
+ ### WEBPAGE STARTED :D                               ### 
+ ### URL:  http://172.31.17.249:9999                   ### 
+ ###==================================================### 
+
+
+
+
+ * Serving Flask app 'server'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9999
+ * Running on http://172.31.17.249:9999
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 134-261-581
+129.241.236.69 - - [01/May/2024 09:46:51] "GET / HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:46:51] "GET /static/styles/homeHeaderStyles.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:46:51] "GET /static/styles/buttonStyles.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:46:51] "GET /static/styles/secretStyle.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:46:51] "GET /static/styles/sliderStyles.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:46:51] "GET /static/images/homeIcon.png HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:46:51] "GET /static/scripts/sliderBehaviour.js HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:46:51] "GET /static/scripts/buttonBehaviour.js HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:46:51] "GET /static/images/headerImage.png HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:46:51] "GET /static/images/TabIcon.ico HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:46:51] "GET /api/getMemesList HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:46:59] "GET / HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:46:59] "GET /static/styles/homeHeaderStyles.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:46:59] "GET /static/styles/sliderStyles.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:46:59] "GET /static/styles/buttonStyles.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:46:59] "GET /static/styles/secretStyle.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:46:59] "GET /static/scripts/sliderBehaviour.js HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:46:59] "GET /static/images/homeIcon.png HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:46:59] "GET /static/scripts/buttonBehaviour.js HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:46:59] "GET /static/images/TabIcon.ico HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:46:59] "GET /api/getMemesList HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:00] "GET / HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:00] "GET /static/styles/homeHeaderStyles.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:00] "GET /static/scripts/sliderBehaviour.js HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:00] "GET /static/styles/buttonStyles.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:00] "GET /static/styles/sliderStyles.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:00] "GET /static/images/homeIcon.png HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:00] "GET /static/scripts/buttonBehaviour.js HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:00] "GET /static/styles/secretStyle.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:00] "GET /static/images/TabIcon.ico HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:00] "GET /api/getMemesList HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:10] "GET / HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:10] "GET /static/styles/homeHeaderStyles.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:10] "GET /static/styles/buttonStyles.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:10] "GET /static/styles/sliderStyles.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:10] "GET /static/styles/secretStyle.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:10] "GET /static/scripts/sliderBehaviour.js HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:10] "GET /static/images/homeIcon.png HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:10] "GET /static/scripts/buttonBehaviour.js HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:10] "GET /static/images/headerImage.png HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:10] "GET /api/getMemesList HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:26] "GET / HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:26] "GET /static/styles/homeHeaderStyles.css HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:26] "GET /static/styles/buttonStyles.css HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:26] "GET /static/styles/sliderStyles.css HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:26] "GET /static/styles/secretStyle.css HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:26] "GET /static/scripts/sliderBehaviour.js HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:26] "GET /static/images/homeIcon.png HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:26] "GET /static/images/headerImage.png HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:26] "GET /static/scripts/buttonBehaviour.js HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:27] "GET /api/getMemesList HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:27] "GET /static/images/TabIcon.ico HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:32] "GET /results?sliderValueNecessaryEffect=252&sliderValueDailyEnergyRequirement=1500&sliderValueDesiredBatteryCapacity=7260&sliderValueSunCondition=0&sliderValueAverageWaveHeight=5&sliderValueAverageWindSpeed=10 HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:33] "GET /static/styles/headerStyles.css HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:33] "GET /static/images/homeIcon.png HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:33] "GET /static/styles/buttonStyles.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:33] "GET /static/styles/resultStyle.css HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:33] "GET /static/scripts/results.js HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:33] "GET /static/scripts/buttonBehaviour.js HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:33] "GET /static/images/headerImageRedundant.jpg HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:33] "GET /static/images/TabIcon.ico HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:33] "GET /api/getMemesList HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:33] "POST /calculate HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:34] "POST /api/energySolution HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:36] "GET / HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:36] "GET /static/styles/homeHeaderStyles.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:36] "GET /static/styles/sliderStyles.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:36] "GET /static/styles/buttonStyles.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:36] "GET /static/scripts/sliderBehaviour.js HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:36] "GET /static/images/homeIcon.png HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:36] "GET /static/styles/secretStyle.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:36] "GET /static/scripts/buttonBehaviour.js HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:36] "GET /api/getMemesList HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:36] "GET /static/images/TabIcon.ico HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:40] "GET /memes HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:41] "GET /static/scripts/buttonBehaviour.js HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:41] "GET /static/images/homeIcon.png HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:41] "GET /static/styles/headerStyles.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:41] "GET /static/styles/secretStyle.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:41] "GET /static/styles/buttonStyles.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:41] "GET /static/images/memes/gandalf.gif HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:41] "GET /static/images/TabIcon.ico HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:41] "GET /api/getMemesList HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:42] "GET /static/images/memes/430109080_409458835140733_9035750468650739420_n.jpg HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:45] "GET /static/images/memes/290476937_584714156376462_6820525622356806607_n.jpg HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:47] "GET /static/images/memes/309230005_5459616627407255_8914248374553243153_n.png HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:49] "GET / HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:49] "GET /static/styles/sliderStyles.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:49] "GET /static/styles/buttonStyles.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:49] "GET /static/styles/homeHeaderStyles.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:49] "GET /static/images/homeIcon.png HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:49] "GET /static/styles/secretStyle.css HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:49] "GET /static/scripts/sliderBehaviour.js HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:49] "GET /static/scripts/buttonBehaviour.js HTTP/1.1" 304 -
+129.241.236.69 - - [01/May/2024 09:47:49] "GET /api/getMemesList HTTP/1.1" 200 -
+129.241.236.69 - - [01/May/2024 09:47:49] "GET /static/images/TabIcon.ico HTTP/1.1" 304 -
